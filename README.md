@@ -1,31 +1,23 @@
-\`\`\`markdown
+markdown
+Copy code
 # img2clip
 
-This project aims to leverage multi-modal LLM capabilities for the purpose of extracting text from user submitted images and automatically sending the extracted content to the user's clipboard for easy pasting in other applications.
+img2clip is a Python application that extracts text from images using OpenAI's multi-modal Large Language Models (LLMs) and automatically copies the extracted text to the user's clipboard.
 
-## Setting up OpenAI Key
+## Prerequisites
 
-Before you can use img2clip, you need to set your OpenAI key as an environment variable. Here's how you can do this:
+Before running the img2clip application, you need to set your OpenAI API key as an environment variable.
 
-### On macOS and Linux:
+```bash
+OPENAI_KEY="sk-p..."
+```
 
-1. Open your terminal.
-2. Run the following command, replacing `your_openai_key` with your actual OpenAI key:
+If you do not set the API key as an environment variable, the application will prompt you to enter it manually each time you run it.
 
-\`\`\`bash
-echo 'export OPENAI_KEY="your_openai_key"' >> ~/.bash_profile
-\`\`\`
+## Usage
+- Install dependencies using pip install -r requirements.txt.
+- Run `python img2clip.py path/to/image.jpg` to extract text from the specified image and copy it to the clipboard.
+- Once the application has extracted the text, you can paste it into any text editor or application.
 
-3. Restart your terminal or run `source ~/.bash_profile` to load the new environment variable.
-
-### On Windows:
-
-1. Open the Start Menu and search for "Environment Variables".
-2. Click on "Edit the system environment variables".
-3. In the System Properties window that appears, click on "Environment Variables".
-4. In the Environment Variables window, click on "New" under the "User variables" section.
-5. Enter `OPENAI_KEY` as the variable name and your actual OpenAI key as the variable value.
-6. Click "OK" in all windows to save the new environment variable.
-
-If you don't set the OpenAI key as an environment variable, you will be prompted to enter it when you run img2clip.
-\`\`\`
+## Disclaimer
+This project is for educational and demonstration purposes only. Use responsibly and ensure compliance with OpenAI's use case policy and any relevant laws or regulations.

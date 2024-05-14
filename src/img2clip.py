@@ -13,7 +13,7 @@ if len(sys.argv) < 2:
 image_path = sys.argv[1]
 
 # Start the halo spinner
-spinner = halo.Halo(text='Analyzing text...', spinner='dots')
+spinner = halo.Halo(text='Analyzing image...', spinner='dots')
 spinner.start()
 
 try:

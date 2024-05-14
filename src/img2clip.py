@@ -17,9 +17,17 @@ spinner = halo.Halo(text='Analyzing text...', spinner='dots')
 spinner.start()
 
 try:
+    # Encode the image to base64
     base64_image = image_encoder.encode_image(image_path)
+
+    # Make a request to OpenAI for text extraction
     llm_response = openai_request.openai_request(base64_image)
+
+    # Copy the extracted text to clipboard
     clipboard_manager.copy_to_clipboard(llm_response)
-    spinner.succeed('Text extraction complete, smash that ⌘ / ctrl V!')  # Display green checkmark and message
+
+    # Display success message with a green checkmark
+    spinner.succeed('Text extraction complete, smash that ⌘ / ctrl V!')
 except Exception as e:
-    spinner.fail(str(e))  # Display red cross and error message
+    # Display error message with a red cross
+    spinner.fail(str(e))

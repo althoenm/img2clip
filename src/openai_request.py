@@ -3,8 +3,10 @@ import prompts
 import os
 import getpass
 
+# Get the OpenAI API key from the environment variables
 openai_key = os.getenv("OPENAI_API_KEY")
 
+# If the API key is not set in the environment variables, prompt the user to enter it
 if not openai_key:
     openai_key = getpass.getpass("Please enter your OpenAI API key: ")
 

@@ -3,6 +3,7 @@ import prompts
 import os
 import getpass
 
+
 # Get the OpenAI API key from the environment variables
 openai_key = os.getenv("OPENAI_API_KEY")
 

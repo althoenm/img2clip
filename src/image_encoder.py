@@ -1,5 +1,6 @@
 import base64
 
+
 def encode_image(image_path: str) -> str:
   """
   Encode the image located at the given path and return the base64 encoded string.

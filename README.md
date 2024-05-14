@@ -4,6 +4,9 @@ Copy code
 
 img2clip is a Python application that extracts text from images using OpenAI's multi-modal GPT-4o model and automatically copies the extracted text to the user's clipboard.
 
+## Demo
+![img2clip demo](images/img2clip-demo.gif)
+
 ## Prerequisites
 
 Before running the img2clip application, you need to set your OpenAI API key as an environment variable.
